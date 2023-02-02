@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>AI AUTOSAR Advisor</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='book.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='autosar.png') }}" class="icon" />
+  <h3>AI AUTOSAR ADVISOR</h3>
+  <form action="/" method="post">
+    <input type="text" name="autosar" placeholder="What do you want to know in AUTOSAR ?" required />
+    <input type="submit" value="Generate Response" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
